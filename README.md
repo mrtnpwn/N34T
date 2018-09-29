@@ -1,6 +1,6 @@
 # N34T
 
-A Logging Package for Luvit.
+:sparkles: A (tiny) Logging Package for Luvit.
 
 ![N34T Preview](https://image.ibb.co/hN7Pmp/n34t_colors.png)
 

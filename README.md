@@ -2,8 +2,6 @@
 
 :sparkles: A (tiny) Logging Package for Luvit.
 
-![N34T Preview](https://image.ibb.co/hN7Pmp/n34t_colors.png)
-
 ## Installation
 
 ```bash
@@ -12,23 +10,23 @@ lit install mrtnpwn/N34T
 
 ## Usage
 
-N34T has some NEAT functions for logging, these are:
-
-* ``N34T.info(message)``
-* ``N34T.warn(message)``
-* ``N34T.success(message)``
-* ``N34T.error(message)``
-
-and ``N34T.output``, this one is the name of the output file (if you want to have one).
-
-## Example
-
 ```lua
-local l = require('N34T')
-l.output = 'my-output.log'
+local N34T = require('N34T')
 
-l.info('Info Message, Yay!')
---> will make a file called 'my-output.log' with the info message.
+local logger = N34T() -- or N34T(level) to limit the log level!
+  --- logger:trace(...)
+  --- logger:info(...)
+  --- logger:warn(...)
+  --- logger:error(...)
+  --- logger:fatal(...)
+
+logger:info('Working out of the box')
+
+logger:add('hello_{hello}.log', {
+  hello = 'world'
+}) -- logfiles and formats1!1!
+
+logger:info('Simple and easy!') -- written in hello_world.log
 ```
 
 ## License
